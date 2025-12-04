@@ -4,6 +4,10 @@ import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  // 定義全域變數，解決某些套件在瀏覽器找不到 process 的問題
+  define: {
+    'process.env': {}
+  },
   // 開發模式設定 (npm run dev)
   server: {
     host: '0.0.0.0', // 監聽所有 IP，解決 Render 無法連線問題
