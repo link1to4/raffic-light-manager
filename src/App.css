@@ -1,0 +1,11 @@
+/* 原本的 App.css 會有 max-width: 1280px 和 text-align: center
+  這會限制 Dashboard 的寬度並導致文字強制置中。
+  我們將其清空或重置，讓 Tailwind CSS 完全接管排版。
+*/
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* 恢復預設靠左對齊 */
+}
